@@ -69,7 +69,7 @@ function fnLoad(){
             // alert("这行跳转");
             oW.style.opacity = 0;
         }
-    }, 2000);
+    }, 1000);
     function end(){
         // alert("动画执行完毕");
         removeClass(oW, "pageShow");
@@ -94,6 +94,11 @@ function fnTab(){
     var oTab = id("tabPic");
     var oList = id("picList");
     var aNav = oTab.getElementsByTagName("nav")[0].children;
+    var pPi = oTab.getElementsByTagName("span")[0].children;
+    console.log(pPi.length);
+    console.log(pPi);
+    console.log(pPi.toString());
+    console.log(aNav.toString());
     var iNow = 0;
     var iX = 0;
     var iW = view().w;
@@ -123,6 +128,7 @@ function fnTab(){
         {
             iNow++;
             iNow = iNow%aNav.length;
+            // pPi = iNow%pPi.length;
             tab();
         }, 2000);
     }
@@ -176,9 +182,14 @@ function fnTab(){
         // 这里是控制nav几个点的的
         for(let i = 0; i <aNav.length; i++)
         {
+            console.log(pPi);
+            console.log(aNav[i]);
             removeClass(aNav[i], "active");
+
+            removeClass(pPi[i], "piShow");
         }
         addClass(aNav[iNow], "active");
+        addClass(pPi[iNow], "piShow");
     }
 }
 

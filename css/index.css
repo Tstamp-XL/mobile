@@ -353,6 +353,12 @@ body{
 .picMask nav a.active{
 	opacity: 1;
 }
+.pi{
+	display: none;
+}
+.piShow{
+	display: block;
+}
 
 /* 给景区评分 */
 #score{
