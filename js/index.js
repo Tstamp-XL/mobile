@@ -69,7 +69,7 @@ function fnLoad(){
             // alert("这行跳转");
             oW.style.opacity = 0;
         }
-    }, 1000);
+    }, 2000);
     function end(){
         // alert("动画执行完毕");
         removeClass(oW, "pageShow");
